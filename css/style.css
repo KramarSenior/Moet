@@ -252,21 +252,19 @@ body {
       -webkit-transform: scale(1.08);
       transform: scale(1.08); }
 
-.cards::-webkit-scrollbar {
-  width: 0 !important; }
-
 .cards {
   display: flex;
   flex-direction: column;
   gap: 4.4rem;
   margin-bottom: 4.4rem;
-  overflow-x: auto;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
   padding-bottom: 1.6rem; }
   @media (max-width: 768px) {
     .cards {
       gap: .8rem; } }
+  .cards__card {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important; }
   .cards__row {
     display: flex;
     gap: 4.4rem; }
@@ -283,7 +281,8 @@ body {
     position: relative;
     overflow: hidden;
     background-color: #F9F9F9;
-    padding: 5.1rem 4.6rem 5.1rem 4.7rem; }
+    padding: 5.1rem 4.6rem 5.1rem 4.7rem;
+    cursor: pointer; }
     @media (max-width: 768px) {
       .cards__picture {
         min-width: 15.4rem;
@@ -419,7 +418,7 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1.6rem;
-  grid-template-areas: "photo-1 photo-2 photo-3 photo-10 photo-10 photo-12" "photo-4 photo-4 photo-5 photo-10 photo-10 photo-8" "photo-4 photo-4 photo-6 photo-7 photo-9 photo-11"; }
+  grid-template-areas: "photo-1 photo-2 photo-3 photo-10 photo-10 photo-12" "photo-4 photo-4 photo-5 photo-10 photo-10 photo-8" "photo-4 photo-4 photo-6 photo-7 photo-9 photo-11"; }
   @media (max-width: 768px) {
     .mosaic {
       display: none; } }

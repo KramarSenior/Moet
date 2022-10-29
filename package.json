@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^7.0.3"
+    "node-sass": "^7.0.3",
+    "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
     "prettier": "2.7.1"

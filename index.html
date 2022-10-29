@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <title>Moet</title>
 </head>
 <body>
 
@@ -68,7 +70,7 @@
         <div class="taste-grid">
             <a href="#glenmorangie" class="taste-grid__item"><img src="img/taste/for_connoisseurs.png" alt=""></a>
             <a href="#belveder" class="taste-grid__item"><img src="img/taste/holidays.png" alt=""></a>
-            <a href="#all-products" class="taste-grid__item"><img src="img/taste/for_new_year.png" alt=""></a>
+            <a href="#moet-chandon" class="taste-grid__item"><img src="img/taste/for_new_year.png" alt=""></a>
             <a href="#spritz" class="taste-grid__item"><img src="img/taste/for_spritz_lovers.png" alt=""></a>
             <a href="#basketball" class="taste-grid__item"><img src="img/taste/for_basketball_fans.png" alt=""></a>
             <a href="#hennessy" class="taste-grid__item"><img src="img/taste/for_present.png" alt=""></a>
@@ -1547,5 +1549,36 @@
         <img src="img/mosaic/winter-shot-3.png" alt=""/>
     </div>
 </div>
+<script type="module">
+    const rows = document.querySelectorAll('.cards__row');
+
+    rows.forEach((row)=> {
+        tns({
+            container: row,
+            mode: "carousel",
+            items: 3,
+            slideBy: 1,
+            autoplay: true,
+            gutter: 12,
+            loop: true,
+            nav: false,
+            mouseDrag: true,
+            lazyload: true,
+            controls: false,
+            autoplayButton: false,
+            autoplayButtonOutput: false,
+            responsive: {
+                320: {
+                    items: 2,
+                },
+
+                1100: {
+                    items: 3,
+                }
+            }
+        });
+    });
+
+</script>
 </body>
 </html>

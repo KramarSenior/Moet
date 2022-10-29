@@ -67,22 +67,22 @@
 }
 
 
-  .cards::-webkit-scrollbar { width: 0 !important }
-
-
 
 .cards {
   display: flex;
   flex-direction: column;
   gap: 4.4rem;
   margin-bottom: 4.4rem;
-  overflow-x: auto;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
   padding-bottom: 1.6rem;
 
   @media (max-width: 768px) {
     gap: .8rem;
+  }
+
+  &__card {
+    display: flex!important;
+    align-items: center!important;
+    flex-direction: column!important;
   }
 
   &__row {
@@ -107,6 +107,7 @@
     overflow: hidden;
     background-color: #F9F9F9;
     padding: 5.1rem 4.6rem 5.1rem 4.7rem;
+    cursor: pointer;
 
     @media (max-width: 768px) {
       min-width: 15.4rem;
