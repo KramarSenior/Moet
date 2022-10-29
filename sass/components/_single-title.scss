@@ -1,0 +1,11 @@
+.single-title {
+  max-width: 87.4rem;
+  margin: 0 auto 6.4rem auto;
+  color: #684A2A;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    margin: 0 auto 2.4rem auto;
+    text-align: left;
+  }
+}

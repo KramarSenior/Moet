@@ -1,0 +1,27 @@
+.single-image {
+  &.--header {
+    padding-top: 5.4rem;
+    padding-bottom: 2.4rem;
+
+    @media (max-width: 1024px) {
+      padding: 2.4rem 0;
+    }
+  }
+
+  &.--normal {
+    padding-top: 12.8rem;
+    padding-bottom: 12.8rem;
+
+    @media (max-width: 768px) {
+      padding-top: 6.8rem;
+      padding-bottom: 4.4rem;
+
+    }
+
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}

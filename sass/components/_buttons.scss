@@ -1,0 +1,25 @@
+.btn,
+.btn:link,{
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s, font-weight .3s, top .4s;
+
+  &.__primary {
+    background-color: #684A2A;
+    color: #FFFFFF;
+    padding: 1.6rem 3.2rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #7E5E41;
+    }
+  }
+
+  &.__secondary {
+    padding: 1.6rem 1.6rem;
+    color: #0A0A0A;
+    text-transform: uppercase;
+    border: 1px solid black;
+  }
+}

@@ -1,0 +1,14 @@
+.row {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 6.4rem;
+
+    @media (max-width: 1024px) {
+        padding: 0 1.6rem;
+    }
+
+    &.--full {
+        padding: 0;
+    }
+
+}
