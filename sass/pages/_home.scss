@@ -6,10 +6,14 @@
   }
 }
 
+.companies::-webkit-scrollbar { width: 0 !important }
+
 .companies {
   display: flex;
   gap: 1.4rem;
-  overflow-x: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  overflow-x: auto;
 
   @media (max-width: 916px) {
     flex-wrap: wrap;
