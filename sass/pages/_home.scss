@@ -14,6 +14,7 @@
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   overflow-x: auto;
+  scrollbar-width: none;
 
   @media (max-width: 916px) {
     flex-wrap: wrap;
@@ -78,6 +79,7 @@
   gap: 4.4rem;
   margin-bottom: 4.4rem;
   padding-bottom: 1.6rem;
+  position: relative;
 
   @media (max-width: 768px) {
     gap: .8rem;
@@ -85,13 +87,40 @@
 
   &__card {
     display: flex!important;
-    align-items: center!important;
     flex-direction: column!important;
+
+    &.no-slider {
+      @media (max-width: 1118px) {
+        flex: 0 0 47%;
+
+
+      }
+
+      @media (max-width: 768px) {
+        flex: 0 0 48%;
+      }
+    }
+
+
   }
 
   &__row {
     display: flex;
     gap: 4.4rem;
+
+    &.with-slider {
+      //background-color: red;
+      gap: 1.2rem;
+    }
+
+    &.without-slider {
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        gap: 1.2rem;
+      }
+    }
   }
   
   &__basket {
@@ -112,6 +141,8 @@
     background-color: #F9F9F9;
     padding: 5.1rem 4.6rem 5.1rem 4.7rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 
     @media (max-width: 768px) {
       min-width: 15.4rem;
@@ -189,6 +220,60 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.controls {
+
+}
+
+.chevron-arrow-left {
+  display: inline-block;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 20px; height: 20px;
+  transform: rotate(-225deg);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    left: 0;
+  }
+}
+
+.chevron-arrow-right {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  cursor: pointer;
+  display: inline-block;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 20px; height: 20px;
+  transform: rotate(-45deg);
+
+  @media (max-width: 1024px) {
+    right: 0;
+  }
+}
+
+
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 9px;
+  cursor: pointer;
+
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+
 }
 
 .two-images {
@@ -394,7 +479,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 200px;
   grid-auto-flow: dense;
-  padding: 4.4rem 2rem;
+  padding: 4.4rem 1.6rem;
 }
 .grid-wrapper .wide {
   grid-column: span 2;
