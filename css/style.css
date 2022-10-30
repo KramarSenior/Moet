@@ -288,7 +288,8 @@ body {
         min-width: 15.4rem;
         padding: .8rem;
         display: flex;
-        height: 23rem; }
+        height: 23rem;
+        cursor: unset; }
         .cards__picture img {
           width: 100%;
           object-fit: contain; } }
